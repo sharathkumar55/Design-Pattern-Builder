@@ -2,9 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        //PaySlip paySlip = new PaySlip(10,20,30,20,70);
-        PaySlip paySlip = new PayslipBuilder().setBasic(20).setDa(90).build();
+        /*for required fields, created constructor for basic,hra and DA,so we must pass required values
+        for optional fields like medicalAllowance,specialAllownace,lunchAllowance,we can set optionally.*/
+        PaySlip paySlip = new PayslipBuilder(10,20,30).setMedicalAllowance(50).build();
         System.out.println(paySlip);
     }
 }
